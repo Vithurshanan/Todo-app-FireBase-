@@ -60,18 +60,21 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent:"center",
   },
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    top:32,
+    position:"absolute"
   },
   title: {
     fontSize: 38,
     fontWeight: '800',
     color: colors.white,
     paddingHorizontal: 64,
+    paddingVertical:64
   },
   divider: {
     backgroundColor: colors.lightBlue,

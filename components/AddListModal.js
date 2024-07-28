@@ -10,7 +10,7 @@ export default class AddListModal extends Component {
 
   render() {
     return (
-      <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === "ios" ? "padding" : null}>
+      <View style={styles.container} >
         <TouchableOpacity style={styles.closeButton} onPress={this.props.closeModal}>
           <AntDesign name="close" size={24} color={colors.white} />
         </TouchableOpacity>
@@ -23,8 +23,11 @@ export default class AddListModal extends Component {
             placeholderTextColor={colors.lightBlue}
             onChangeText={text => this.setState({ name: text })}
           />
+          <TouchableOpacity style={[styles.create , {backgroundColor:colors.blue}]}>
+            <Text style={{color:colors.white , fontWeight:"600"}}>Create</Text>
+          </TouchableOpacity>
         </View>
-      </KeyboardAvoidingView>
+      </View>
     );
   }
 }
@@ -61,4 +64,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     color: "white",
   },
+  create:{
+    marginTop:24,
+    height:50,
+    borderRadius:6,
+    alignItems:"center",
+    justifyContent:"center"
+  }
 });
